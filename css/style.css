@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /* Variable */
-@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
@@ -89,12 +88,6 @@ a:hover {
    width: 100%;
    height: 100%;
 }
-
-.top a {
-   color: #f2f3f4;
-   text-shadow: 0 0 6px #1c1c1c;
-}
-
 /* ----------     HUMBERGER MENU     ---------- */
 .check {
    display: none;
@@ -231,148 +224,8 @@ a:hover {
    transform: translateX(0);
 }
 
-.profile.open .menu a,
-.works.open .menu a {
+.profile.open .menu a {
    color: #0c090a;
-}
-
-/* ----------     TOP     ---------- */
-.top main {
-   flex: 1;
-   max-height: 85vh;
-}
-
-.section {
-   height: 85vh;
-   display: flex;
-   align-items: center;
-}
-
-@media screen and (min-width:768px) {
-   .top main {
-      max-height: calc(100vh - 3rem);
-   }
-
-   .section {
-      height: 100vh;
-   }
-}
-
-/* TAG */
-.tag-list {
-   width: 80vw;
-   font-family: "Sour Gummy";
-   margin: 0 auto;
-   position: relative;
-   overflow: hidden;
-}
-
-.tag-list h1 {
-   text-align: center;
-   font-size: 10vh;
-   margin-bottom: 10vh;
-}
-
-.tag-inner {
-   display: flex;
-   white-space: nowrap;
-   position: relative;
-   gap: 2rem;
-   will-change: transform;
-   z-index: 10;
-}
-
-.tag {
-   display: flex;
-   align-items: center;
-   background-color: #0c090a;
-   color: #f2f3f4;
-   margin: 1rem 0;
-   padding: 1rem;
-   border-radius: .5rem;
-   font-size: 1.5rem;
-   opacity: .7;
-   transition: transform .3s, opacity .3s;
-}
-
-.tag:hover {
-   transform: scale(1.2);
-   transition: transform .3s;
-   z-index: 10;
-   opacity: 1;
-}
-
-.tag span {
-   padding-right: .25rem;
-}
-
-.fade {
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   height: 6rem;
-   pointer-events: none;
-   background: linear-gradient(to right, #f2f3f4 0%, transparent 20%, transparent 80%, #f2f3f4 100%);
-   z-index: 10;
-}
-
-@media (prefers-color-scheme: dark) {
-   .tag-list h1 {
-      color: #f2f3f4;
-   }
-
-   .tag {
-      background-color: #f2f3f4;
-      color: #0c090a;
-   }
-
-   .fade {
-      background: linear-gradient(to right, #0c090a 0%, transparent 10%, transparent 90%, #0c090a 100%);
-   }
-}
-
-.safari-desktop .tag-inner {
-   animation: tag-scroll 20s linear infinite;
-}
-
-.not-safari-desktop .tag-inner {
-   animation: none;
-}
-
-@keyframes tag-scroll {
-   from {
-      transform: translateX(0);
-   }
-
-   to {
-      transform: translateX(-50%);
-   }
-}
-
-/* ----------     FOOTER     ---------- */
-.footer {
-   padding: 1rem 0;
-}
-
-.footer-txt {
-   font-size: .5rem;
-   font-weight: 300;
-   text-align: center;
-}
-
-@media screen and (min-width:768px) {
-   .footer-txt {
-      font-size: .75rem;
-   }
-}
-
-@media (prefers-color-scheme: dark) {
-
-   .top .footer-txt,
-   .works .footer-txt {
-      color: #f2f3f4;
-   }
 }
 
 /* ----------     PROFILE     ---------- */
@@ -486,108 +339,25 @@ a:hover {
    }
 }
 
-/* WORKS */
-.works {
-   display: flex;
-   flex-direction: column;
+/* ----------     FOOTER     ---------- */
+.footer {
+   padding: 1rem 0;
 }
 
-.works main {
-   flex: 1;
-   margin: 13vh 5vw;
-}
-
-.works main img {
-   max-width: 100px;
-   max-height: 80px;
-}
-
-.works main img:hover {
-   transform: scale(1.2);
-}
-
-.works .title {
-   margin-bottom: 10vh;
-   font-size: 5vw;
-   font-weight: 500;
-   text-align: center;
-}
-
-.works-list {
-   list-style: none;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-gap: 2rem;
-   align-items: center;
-   justify-items: center;
-}
-
-.works-list li {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-
-.works-name {
-   max-width: 70%;
-   text-align: center;
+.footer-txt {
    font-size: .5rem;
-   margin-top: .5rem;
+   font-weight: 300;
+   text-align: center;
 }
 
-@media screen and (min-width:425px) {
-   .works main img {
-      max-width: 150px;
-      max-height: 100px;
-   }
-
-   .works-name {
+@media screen and (min-width:768px) {
+   .footer-txt {
       font-size: .75rem;
    }
 }
 
-@media screen and (min-width:768px) {
-   .works .header {
-      background-color: transparent;
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-   }
-
-   .works .title {
-      font-size: 3rem;
-   }
-
-   .works-list {
-      grid-template-columns: repeat(4, 1fr);
-   }
-}
-
-@media screen and (min-width:1024px) {
-   .works main img {
-      max-width: 200px;
-      max-height: 150px;
-   }
-
-   .works-name {
-      font-size: 1rem;
-      margin-top: 1rem;
-   }
-}
-
 @media (prefers-color-scheme: dark) {
-
-   .works .logo a,
-   .works .menu a {
+   .top .footer-txt, {
       color: #f2f3f4;
-   }
-
-   .works .title {
-      color: #f2f3f4;
-   }
-
-   .works-list li {
-      padding: 1.5rem;
-      background-color: #f2f3f490;
-      border-radius: .5rem;
    }
 }
