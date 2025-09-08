@@ -15,7 +15,6 @@
 html,
 body {
    font-size: 16px;
-   overflow: hidden;
 }
 
 body {
@@ -89,6 +88,7 @@ a:hover {
    width: 100%;
    height: 100%;
 }
+
 /* ----------     HUMBERGER MENU     ---------- */
 .check {
    display: none;
@@ -199,6 +199,7 @@ a:hover {
 }
 
 .menu a,
+.menu a:focus,
 .menu a:hover {
    text-decoration: none;
 }
@@ -232,21 +233,17 @@ a:hover {
 .profile {
    background: #f2f3f4;
    display: flex;
-   flex-direction: column;
    align-items: center;
-}
-
-.profile main {
-   line-height: 1.6;
-   flex: 1;
-   max-height: 85vh;
 }
 
 .profile-inner {
    max-width: 50vw;
-   margin-top: 10vh;
+   height: auto;
+   margin-top: 5rem;
    font-weight: 300;
-   height: 80vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .profile .title {
@@ -257,13 +254,13 @@ a:hover {
    text-align: center;
 }
 
-.profile_name {
-   margin-bottom: 2vh;
-   font-size: .75rem;
+.profile-name {
+   margin-bottom: 1rem;
+   font-size: 1rem;
    text-align: center;
 }
 
-.profile_name span {
+.profile-name span {
    display: inline-block;
    margin-left: 1rem;
    border-left: 1px solid #0c090a;
@@ -272,7 +269,7 @@ a:hover {
 }
 
 .profile-list {
-   margin-bottom: 1.2rem;
+   margin-bottom: 1rem;
    font-size: .75rem;
 }
 
@@ -284,15 +281,25 @@ a:hover {
 
 .profile-list dd {
    overflow: hidden;
+   text-align: center;
+}
+
+.s-pr {
+   margin-bottom: .5rem;
 }
 
 .message {
-   margin-bottom: 10vh;
+   margin-bottom: 3rem;
 }
 
+.s-pr p,
 .message p {
    margin-bottom: .5rem;
    font-size: .75rem;
+}
+
+.sns-go {
+   margin-bottom: 2rem;
 }
 
 .sns-icon {
@@ -310,13 +317,8 @@ a:hover {
 }
 
 @media screen and (min-width:768px) {
-   .profile main {
-      max-height: calc(100vh - 3rem);
-   }
-
    .profile-inner {
       max-width: 500px;
-      margin-bottom: 50vh;
    }
 
    .profile .title {
@@ -328,6 +330,7 @@ a:hover {
    }
 
    .profile-list,
+   .s-pr p,
    .message p {
       font-size: 1rem;
    }
