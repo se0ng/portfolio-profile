@@ -336,9 +336,9 @@ a:hover {
    }
 
    .sns-icon img {
-      width: 3rem;
+      width: 2rem;
       height: auto;
-      border-radius: 1rem;
+      border-radius: .75rem;
    }
 }
 
